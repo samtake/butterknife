@@ -72,5 +72,34 @@ public class SimpleActivity extends Activity {
 
     adapter = new SimpleAdapter(this);
     listOfThings.setAdapter(adapter);
+
+
+//    fieldMethod = getResources().getString(R.strinng.app_name);
+
+
+
+//    @OnClick(R.id.hello) void sayHello() {
+////      Toast.makeText(this, "Hello, views!", LENGTH_SHORT).show();
+////      ViewCollections.run(headerViews, ALPHA_FADE);
+////    }
+    hello.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+
+      }
+    });
+
+
+
+  }
+  //多个view点击监听
+  @OnClick({R.id.hello,R.id.title})
+  public void onClick(int id){
+    switch (id){
+      case R.id.hello:
+        break;
+      case R.id.title:
+        break;
+    }
   }
 }
